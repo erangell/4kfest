@@ -1,0 +1,131 @@
+; SHIFT TEXT SCREEN LEFT ONE BYTE
+;
+         ORG $6000
+;
+         LDX #$01
+LOOP     LDA $400,X
+         DEX
+         STA $400,X
+         INX
+;
+         LDA $480,X
+         DEX
+         STA $480,X
+         INX
+;
+         LDA $500,X
+         DEX
+         STA $500,X
+         INX
+;
+         LDA $580,X
+         DEX
+         STA $580,X
+         INX
+;
+         LDA $600,X
+         DEX
+         STA $600,X
+         INX
+;
+         LDA $680,X
+         DEX
+         STA $680,X
+         INX
+;
+         LDA $700,X
+         DEX
+         STA $700,X
+         INX
+;
+         LDA $780,X
+         DEX
+         STA $780,X
+         INX
+;
+         LDA $428,X
+         DEX
+         STA $428,X
+         INX
+;
+         LDA $4A8,X
+         DEX
+         STA $4A8,X
+         INX
+;
+         LDA $528,X
+         DEX
+         STA $528,X
+         INX
+;
+         LDA $5A8,X
+         DEX
+         STA $5A8,X
+         INX
+;
+         LDA $628,X
+         DEX
+         STA $628,X
+         INX
+;
+         LDA $6A8,X
+         DEX
+         STA $6A8,X
+         INX
+;
+         LDA $728,X
+         DEX
+         STA $728,X
+         INX
+;
+         LDA $7A8,X
+         DEX
+         STA $7A8,X
+         INX
+;
+         LDA $450,X
+         DEX
+         STA $450,X
+         INX
+;
+         LDA $4D0,X
+         DEX
+         STA $4D0,X
+         INX
+;
+         LDA $550,X
+         DEX
+         STA $550,X
+         INX
+;
+         LDA $5D0,X
+         DEX
+         STA $5D0,X
+         INX
+;
+         LDA $650,X
+         DEX
+         STA $650,X
+         INX
+;
+         LDA $6D0,X
+         DEX
+         STA $6D0,X
+         INX
+;
+         LDA $750,X
+         DEX
+         STA $750,X
+         INX
+;
+         LDA $7D0,X
+         DEX
+         STA $7D0,X
+         INX
+;
+         INX
+         CPX #$28
+         BEQ DONE
+         JMP LOOP
+DONE     RTS
+;
